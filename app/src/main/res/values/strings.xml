@@ -16,6 +16,12 @@
     <string name="Txt_no_cuenta">¿No tienes una cuenta?</string>
     <string name="Txt_registrarme">REGISTRARME</string>
 
+    <string name="Txt_registro">Registro de usuario</string>
+    <string name="Et_repeat_password">Repetir contraseña</string>
+    <string name="Btn_registrar">Registrar usuario</string>
+
+    <string name="Btn_cerrar_sesion">Cerrar Sesión</string>
+
     <!--Crear Anuncio-->
     <string name = "Et_nombre"> Nombre del Anuncio</string>
     <string name = "Categoria"> Categoría</string>
