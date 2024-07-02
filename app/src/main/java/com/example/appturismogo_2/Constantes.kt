@@ -1,5 +1,9 @@
 package com.example.appturismogo_2
 
+import android.text.format.DateFormat
+import java.util.Calendar
+import java.util.Locale
+
 object Constantes {
 
     fun obtenertiempodevice(): Long{
@@ -15,4 +19,16 @@ object Constantes {
         "Paeeos y Excursiones",
         "Hoteles y Hospedajes"
     )
+
+    fun obtenerTiempoDis() : Long{
+        return System.currentTimeMillis()
+    }
+
+    fun obtenerFecha(tiempo : Long) : String{
+        val calendario = Calendar.getInstance(Locale.ENGLISH)
+        calendario.timeInMillis = tiempo
+
+        return DateFormat.format("dd/MM/yyyy", calendario).toString()
+    }
+
 }
