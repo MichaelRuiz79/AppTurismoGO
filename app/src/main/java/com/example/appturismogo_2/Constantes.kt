@@ -15,10 +15,19 @@ object Constantes {
     const val anuncio_nodisponible = "No Disponible"
 
     val categorias = arrayOf(
+        "Todos",
         "Restaurantes",
-        "Paeeos y Excursiones",
+        "Paseos y Excursiones",
         "Hoteles y Hospedajes"
     )
+
+    val categoriasIcono = arrayOf(
+        R.drawable.ic_categoria_todos,
+        R.drawable.ic_categoria_rest,
+        R.drawable.ic_categoria_paseos,
+        R.drawable.ic_categoria_hotel,
+    )
+
 
     fun obtenerTiempoDis() : Long{
         return System.currentTimeMillis()
