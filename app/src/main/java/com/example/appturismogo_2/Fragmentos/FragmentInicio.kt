@@ -24,12 +24,10 @@ class FragmentInicio : Fragment() {
 
     private lateinit var binding : FragmentInicioBinding
 
-
     private lateinit var mContext : Context
 
     private lateinit var anuncioArrayList: ArrayList<ModeloAnuncio>
     private lateinit var adaptadorAnuncio: AdaptadorAnuncio
-
 
 
     override fun onAttach(context: Context) {

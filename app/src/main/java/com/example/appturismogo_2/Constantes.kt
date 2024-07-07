@@ -20,6 +20,15 @@ object Constantes {
         "Paseos y Excursiones",
         "Hoteles y Hospedajes"
     )
+    val departamentos = arrayOf(
+        "Lima",
+        "Ayacucho",
+        "Arequipa",
+        "Ica",
+        "Tumbes",
+        "Piura",
+        "Cusco"
+    )
 
     val categoriasIcono = arrayOf(
         R.drawable.ic_categoria_todos,

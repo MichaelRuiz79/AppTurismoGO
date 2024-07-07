@@ -22,6 +22,7 @@ import com.example.appturismogo_2.Adaptadores.AdaptadorImagenSeleccionada
 import com.example.appturismogo_2.Constantes
 import com.example.appturismogo_2.Modelo.ModeloImageSeleccionada
 import com.example.appturismogo_2.R
+import com.example.appturismogo_2.SeleccionarUbicacion
 import com.example.appturismogo_2.databinding.ActivityCrearAnuncioBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -50,6 +51,9 @@ class CrearAnuncio : AppCompatActivity() {
 
         val adaptadorCat = ArrayAdapter(this, R.layout.item_categoria, Constantes.categorias)
         binding.Categoria.setAdapter(adaptadorCat)
+
+        val adaptadorLoc = ArrayAdapter(this, R.layout.item_locacion_list, Constantes.departamentos)
+        binding.locacion.setAdapter(adaptadorLoc)
 
         imagenSelecArrayList = ArrayList()
         cargarImagenes()
@@ -82,10 +86,10 @@ class CrearAnuncio : AppCompatActivity() {
         if (categoria.isEmpty()){
             binding.Categoria.error = "Ingrese una categoria"
             binding.Categoria.requestFocus()
-        } //else if (direccion.isEmpty()){
-            //binding.locacion.error = "Ingrese una locación"
-            //binding.locacion.requestFocus()
-        //}
+        } else if (direccion.isEmpty()){
+            binding.locacion.error = "Ingrese una locación"
+            binding.locacion.requestFocus()
+        }
         else if (precio.isEmpty()){
             binding.precio.error = "Ingrese un precio"
             binding.precio.requestFocus()
@@ -104,6 +108,7 @@ class CrearAnuncio : AppCompatActivity() {
         }
 
     }
+
 
     private fun agregarAnuncio() {
         progressDialog.setMessage("Agregando anuncio")

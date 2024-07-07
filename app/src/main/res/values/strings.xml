@@ -1,4 +1,5 @@
 <resources>
+    <string name="mi_google_maps_api_key">AIzaSyC0QIkyG3utSE30p9hFYqsw8DJW3_g04_c</string>
     <string name="app_name">AppTurismoGO_2</string>
     <string name="Item_Inicio">Home</string>
     <string name="Item_vender">Publicar</string>
@@ -23,12 +24,12 @@
     <string name="Btn_cerrar_sesion">Cerrar Sesión</string>
 
     <!--Crear Anuncio-->
-    <string name = "Et_nombre"> Nombre del Anuncio</string>
-    <string name = "Categoria"> Categoría</string>
-    <string name = "Locación"> Locacion</string>
-    <string name = "Et_precio"> Precio</string>
-    <string name = "Et_descripción"> Descripción</string>
-    <string name = "btn_Crear_Anuncio"> Crear Anuncio</string>
+    <string name="Et_nombre"> Nombre del Anuncio</string>
+    <string name="Categoria"> Categoría</string>
+    <string name="Locación"> Locacion</string>
+    <string name="Et_precio"> Precio</string>
+    <string name="Et_descripción"> Descripción</string>
+    <string name="btn_Crear_Anuncio"> Crear Anuncio</string>
 
     <!--Mapas-->
     <string name="Txt_selec_ubicacion">Seleccione ubicación</string>
