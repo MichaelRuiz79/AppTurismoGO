@@ -1,12 +1,14 @@
 package com.example.appturismogo_2.Adaptadores
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.appturismogo_2.Constantes
+import com.example.appturismogo_2.DetalleAnuncio.DetalleAnuncio
 import com.example.appturismogo_2.Modelo.ModeloAnuncio
 import com.example.appturismogo_2.R
 import com.example.appturismogo_2.databinding.ItemAnuncioBinding
@@ -58,6 +60,12 @@ class AdaptadorAnuncio: RecyclerView.Adapter<AdaptadorAnuncio.HolderAnuncio> {
         holder.Tv_direccion.text = direccion
         holder.tv_precio.text = precio
         holder.tv_fecha.text = formatoFecha
+
+        holder.itemView.setOnClickListener{
+            val intent = Intent(context, DetalleAnuncio:: class.java)
+            intent.putExtra("idAnuncio", modeloAnuncio.id)
+            context.startActivity(intent)
+        }
 
         holder.tv_fav.setOnClickListener {
             val favorito = modeloAnuncio.favorito
