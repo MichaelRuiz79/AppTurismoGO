@@ -1,31 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/Item_Inicio"
-        android:title="@string/Item_Inicio"
-        android:icon="@drawable/ic_inicio"
+<item
+    android:id="@+id/Item_Inicio"
+    android:title="@string/Item_Inicio"
+    android:icon="@drawable/ic_inicio"
+    />
 
-        />
+<item
+    android:id="@+id/Item_Cuenta"
+    android:title="@string/Item_Cuenta"
+    android:icon="@drawable/ic_cuenta"
+    />
 
-    <item
-        android:id="@+id/Item_Cuenta"
-        android:title="@string/Item_Cuenta"
-        android:icon="@drawable/ic_cuenta"
-        />
-    <item
-        android:id="@+id/Item_Vender"
-        android:title="@string/Item_vender"
-        android:enabled="false"
-        />
-    <item
-        android:id="@+id/Item_Anuncios"
-        android:title="@string/Item_Mis_Anuncios"
-        android:icon="@drawable/ic_anuncios"
-        />
-    <item
-        android:id="@+id/Item_Chat"
-        android:title="@string/Item_Chat"
-        android:icon="@drawable/ic_chat"
-        />
+<item
+    android:id="@+id/Item_Vender"
+    android:title="@string/Item_vender"
+    android:enabled="false"
+    />
+
+<item
+    android:id="@+id/Item_Anuncios"
+    android:title="@string/Item_Mis_Anuncios"
+    android:icon="@drawable/ic_anuncios"
+    />
+
+<item
+    android:id="@+id/Item_Chat"
+    android:title="@string/Item_Chat"
+    android:icon="@drawable/ic_chat"
+    />
+
+<!-- New items for Actividades, Reseñas, and Dejar Reseña -->
+<item
+    android:id="@+id/Item_Actividades"
+    android:title="@string/Item_Actividades"
+    android:icon="@drawable/ic_actividades"
+    />
+
+<item
+    android:id="@+id/Item_Resenas"
+    android:title="@string/Item_Resenas"
+    android:icon="@drawable/ic_resenas"
+    />
+
+<item
+    android:id="@+id/Item_DejarResena"
+    android:title="@string/Item_Dejar_Resena"
+    android:icon="@drawable/ic_dejar_resena"
+    />
 </menu>

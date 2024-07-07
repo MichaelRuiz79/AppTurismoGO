@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fragmentInicio">
+
+    <fragment
+        android:id="@+id/fragmentInicio"
+        android:name="com.example.appturismogo_2.Fragmentos.FragmentInicio"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/fragmentActividades"
+        android:name="com.example.appturismogo_2.Fragmentos.FragmentActividades"
+        android:label="Actividades"
+        tools:layout="@layout/fragment_actividades">
+        <action
+            android:id="@+id/actionActividadesFragmentToDetalleActividadFragment"
+            app:destination="@id/fragmentDetalleActividad" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentDetalleActividad"
+        android:name="com.example.appturismogo_2.Fragmentos.FragmentDetalleActividad"
+        android:label="Detalle Actividad"
+        tools:layout="@layout/fragment_detalle_actividad" />
+
+    <fragment
+        android:id="@+id/fragmentResenas"
+        android:name="com.example.appturismogo_2.Fragmentos.FragmentResenas"
+        android:label="Reseñas"
+        tools:layout="@layout/fragment_resenas" />
+
+    <fragment
+        android:id="@+id/fragmentResena"
+        android:name="com.example.appturismogo_2.Fragmentos.FragmentResena"
+        android:label="Dejar Reseña"
+        tools:layout="@layout/fragment_resena" />
+
+</navigation>

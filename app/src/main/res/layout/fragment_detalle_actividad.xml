@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragmentos.FragmentDetalleActividad">
+
+    <data>
+        <!-- Declare binding variables here -->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Nombre de la Actividad" />
+
+        <TextView
+            android:id="@+id/textViewDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewNombre"
+            android:layout_marginTop="8dp"
+            tools:text="Descripción de la Actividad" />
+
+        <TextView
+            android:id="@+id/textViewItinerario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewDescripcion"
+            android:layout_marginTop="8dp"
+            tools:text="Itinerario de la Actividad" />
+
+        <Button
+            android:id="@+id/buttonReservar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewItinerario"
+            android:layout_marginTop="16dp"
+            android:text="Reservar" />
+
+    </RelativeLayout>
+</layout>

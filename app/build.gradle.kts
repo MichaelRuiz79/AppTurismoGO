@@ -36,13 +36,13 @@ android {
         jvmTarget = "1.8"
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
+        dataBinding = true
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -51,6 +51,9 @@ dependencies {
     implementation(libs.firebaseAuth)
     implementation(libs.firebaseDatabase)
     implementation(libs.firebaseStorage)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.firebase.firestore.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -59,5 +62,4 @@ dependencies {
     implementation( "com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor( "com.github.bumptech.glide:compiler:4.12.0")
     implementation( "com.squareup.picasso:picasso:2.71828")
-
 }
