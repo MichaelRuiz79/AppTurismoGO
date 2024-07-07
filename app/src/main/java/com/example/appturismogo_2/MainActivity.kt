@@ -1,5 +1,6 @@
 package com.example.appturismogo_2
 
+import FragmentChat
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.appturismogo_2.Anuncios.CrearAnuncio
-import com.example.appturismogo_2.Fragmentos.FragmentChat
+//import com.example.appturismogo_2.Fragmentos.FragmentChat
 import com.example.appturismogo_2.Fragmentos.FragmentCuenta
 import com.example.appturismogo_2.Fragmentos.FragmentInicio
 import com.example.appturismogo_2.Fragmentos.FragmentMisAnuncios
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.Item_Chat->{
-                    verFragmentChat()
+                    verFragmentMisAnuncios()
                     true
                 }
                 R.id.Item_Anuncios->{
@@ -82,13 +83,20 @@ class MainActivity : AppCompatActivity() {
         fragmentTransition.commit()
 
     }
-    private fun verFragmentChat(){
-        binding.TituloRL.text = "Chat"
+    //private fun verFragmentChat(){
+     //   binding.TituloRL.text = "Chat"
+      //  val fragment = FragmentChat()
+       // val fragmentTransition = supportFragmentManager.beginTransaction()
+        //fragmentTransition.replace(binding.FragmentL1.id,fragment,"FragmentChat")
+        //fragmentTransition.commit()
+
+    //}
+    private fun verFragmentMisAnuncios() {
+        binding.TituloRL.text = "Mis Anuncios"
         val fragment = FragmentChat()
         val fragmentTransition = supportFragmentManager.beginTransaction()
-        fragmentTransition.replace(binding.FragmentL1.id,fragment,"FragmentChat")
+        fragmentTransition.replace(binding.FragmentL1.id, fragment, "FragmentChat")
         fragmentTransition.commit()
-
     }
     private fun verFragmentCuenta(){
         binding.TituloRL.text = "Cuenta"

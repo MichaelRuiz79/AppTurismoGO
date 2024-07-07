@@ -1,60 +1,40 @@
-package com.example.appturismogo_2.Fragmentos
-
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.appturismogo_2.Adaptadores.AnunciosAdapter
+import com.example.appturismogo_2.Fragmentos.Anuncio
 import com.example.appturismogo_2.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FragmentChat.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FragmentChat : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var anunciosAdapter: AnunciosAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat, container, false)
-    }
+        val view = inflater.inflate(R.layout.fragment_chat, container, false)
+        recyclerView = view.findViewById(R.id.recyclerView)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FragmentChat.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FragmentChat().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        // Datos harcodeados (simulación de datos)
+        val listaAnuncios = listOf(
+            Anuncio("Juan Pérez", "+123456789", "12345678A", "Tour chachapoyas", "01/07/2024", 4.5),
+            Anuncio("jesus López", "+987654321", "87654321B", "Tour selva", "02/03/2024", 9.2) ,
+            Anuncio("miguel López", "+987654321", "87654321B", "Tour chavin", "04/04/2024", 5.2) ,
+            Anuncio("irene López", "+987654321", "87654321B", "Tour paracas", "01/04/2024", 6.2)
+
+            // Agrega más anuncios según sea necesario
+        )
+
+        anunciosAdapter = AnunciosAdapter(requireContext(), listaAnuncios)
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.adapter = anunciosAdapter
+
+        return view
     }
 }
