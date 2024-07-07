@@ -44,8 +44,8 @@
 
         <!--locacion-->
         <TextView
-            android:id="@+id/Tv_location"
-            android:text="@string/Tv_location"
+            android:id="@+id/Tv_direccion"
+            android:text="@string/Tv_direccion"
             android:layout_toEndOf="@+id/imagenIv"
             android:layout_below="@id/Tv_descripcion"
             android:ellipsize="end"
@@ -58,7 +58,7 @@
         <TextView
             android:id="@+id/Tv_simbolo_precio"
             android:text="@string/Tv_simbolo_precio"
-            android:layout_below="@id/Tv_location"
+            android:layout_below="@id/Tv_direccion"
             android:layout_marginTop="5dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="5dp"
@@ -71,7 +71,7 @@
         <TextView
             android:id="@+id/Tv_precio"
             android:text="@string/Tv_precio"
-            android:layout_below="@+id/Tv_location"
+            android:layout_below="@+id/Tv_direccion"
             android:layout_toEndOf="@+id/Tv_simbolo_precio"
             android:layout_marginTop="5dp"
             android:textSize="13sp"
@@ -85,7 +85,7 @@
             android:layout_marginEnd="5dp"
             android:textSize="13sp"
             android:layout_alignParentEnd="true"
-            android:layout_below="@+id/Tv_location"
+            android:layout_below="@+id/Tv_direccion"
             android:layout_marginTop="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
