@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener
 class FragmentInicio : Fragment() {
 
     private lateinit var binding : FragmentInicioBinding
+
     private lateinit var mContext : Context
 
     private lateinit var anuncioArrayList: ArrayList<ModeloAnuncio>
@@ -73,12 +74,10 @@ class FragmentInicio : Fragment() {
 
     private fun cargarAnuncios(categoria: String){
         anuncioArrayList = ArrayList()
-
         val ref = FirebaseDatabase.getInstance().getReference("Anuncios")
         ref.addValueEventListener(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 anuncioArrayList.clear()
-
                 for (ds in snapshot.children) {
                     try {
                         val modeloAnuncio = ds.getValue(ModeloAnuncio::class.java)
@@ -95,16 +94,6 @@ class FragmentInicio : Fragment() {
 
                     }
                 }
-
-                //for (ds in snapshot.children){
-                //    try{
-                //        val modeloAnuncio= ds.getValue(ModeloAnuncio::class.java)
-
-                //    }catch (e:Exception){
-
-
-                //    }
-                //}
 
                 adaptadorAnuncio = AdaptadorAnuncio(mContext,anuncioArrayList)
                 binding.anunciosRv.adapter = adaptadorAnuncio

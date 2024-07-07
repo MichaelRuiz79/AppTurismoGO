@@ -19,11 +19,8 @@ import com.google.firebase.database.ValueEventListener
 class AdaptadorAnuncio: RecyclerView.Adapter<AdaptadorAnuncio.HolderAnuncio> {
 
     private lateinit var binding: ItemAnuncioBinding
-
     private var context:Context
-
     private var anuncioArrayList : ArrayList<ModeloAnuncio>
-
     private var firebaseAuth : FirebaseAuth
 
     constructor(context: Context, anuncioArrayList: ArrayList<ModeloAnuncio>) {
@@ -32,8 +29,10 @@ class AdaptadorAnuncio: RecyclerView.Adapter<AdaptadorAnuncio.HolderAnuncio> {
         firebaseAuth = FirebaseAuth.getInstance()
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderAnuncio {
-        binding = ItemAnuncioBinding.inflate(LayoutInflater.from(context),parent,false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
+            HolderAnuncio {
+        binding = ItemAnuncioBinding.inflate(LayoutInflater
+            .from(context),parent,false)
         return HolderAnuncio(binding.root)
     }
 

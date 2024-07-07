@@ -1,7 +1,6 @@
 package com.example.appturismogo_2.Modelo
 
 class ModeloAnuncio {
-
     var id : String = ""
     var uid : String = ""
     var titulo_anuncio : String = ""
@@ -46,6 +45,4 @@ class ModeloAnuncio {
         this.favorito = favorito
         this.contadorVistas = contadorVistas
     }
-
-
 }
