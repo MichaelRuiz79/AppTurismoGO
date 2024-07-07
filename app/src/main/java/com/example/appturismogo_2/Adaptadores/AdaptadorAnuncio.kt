@@ -43,7 +43,6 @@ class AdaptadorAnuncio: RecyclerView.Adapter<AdaptadorAnuncio.HolderAnuncio> {
 
     override fun onBindViewHolder(holder: HolderAnuncio, position: Int) {
         val modeloAnuncio = anuncioArrayList[position]
-
         val titulo = modeloAnuncio.titulo_anuncio
         val descripcion = modeloAnuncio.descripcion
         val direccion = modeloAnuncio.direccion
